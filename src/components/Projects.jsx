@@ -30,6 +30,8 @@ const Projects = React.forwardRef((props, ref) => {
             className=" w-full lg:w-1/4 mb-8"
           >
             <motion.img
+              whileHover={{ rotateY: 360 }}
+              transition={{ duration: 4, delay: 0.3 }}
               loading="lazy"
               className=" rounded-lg"
               src={project.image}

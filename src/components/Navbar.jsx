@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 function NavBar({ scrollTo }) {
   return (
     <nav className="z-40 mb-20 flex text-neutral-300 py-11  text-2xl justify-between items-center antialiased">
-      <div className="flex text">VITRA Vu</div>
+      <div className="flex text">VITRA .VU</div>
       <div className="hidden md:flex">
         <ul className="gap-5 flex ">
           <motion.li whileHover={{ scale: 1.2, color: "#8a8a8a" }}>

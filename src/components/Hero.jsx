@@ -1,6 +1,7 @@
 import { HERO_CONTENT } from "../constants";
 import ProfilePic from "../assets/profilePic.jpg";
-import { delay, motion } from "framer-motion";
+import { motion } from "framer-motion";
+import { TextGenerateEffect } from "./ui/TextGenerateEffect";
 function Hero() {
   const container = (delay) => ({
     hidden: { opacity: 0, x: -100 },
@@ -58,9 +59,12 @@ function Hero() {
           variants={container(1.5)}
           initial="hidden"
           animate="visible"
-          className="my-2 max-w-xl py-6 font-light italic tracking-wide text-slate-300"
+          className="my-2 max-w-xl py-6 "
         >
-          {HERO_CONTENT}
+          <TextGenerateEffect
+            className="font-thin text-lg italic tracking-tight text-slate-300"
+            words={HERO_CONTENT}
+          />
         </motion.p>
       </div>
       <div className="h-1/2 w-1/2 md:flex hidden items-center justify-center hover:ring-offset-blue-300 hover:scale-[1.15] transition-all duration-500 ease-in-out ">

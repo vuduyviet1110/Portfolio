@@ -1,6 +1,7 @@
 import React from "react";
 import { CONTACT } from "../constants";
 import { motion } from "framer-motion";
+import { FaFacebook, FaGithub, FaInstagram } from "react-icons/fa";
 const Contact = React.forwardRef((props, ref) => {
   return (
     <div ref={ref} className=" pb-4 text-slate-300 mb-20 mx-8">
@@ -80,6 +81,36 @@ const Contact = React.forwardRef((props, ref) => {
               <div className="text-xl font-bold">Phone:</div>
               <p className="text-lg">{CONTACT.phoneNo}</p>
             </div>
+          </div>
+          <div className="mt-10 flex gap-10 text-3xl ">
+            <motion.a
+              whileHover={{ scale: 1.2 }}
+              className="text-white"
+              href="https://github.com/vuduyviet1110"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaGithub />
+            </motion.a>
+            <motion.a
+              whileHover={{ scale: 1.2 }}
+              className=""
+              href="https://www.facebook.com/profile.php?id=100013827735971"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaFacebook />
+            </motion.a>
+
+            <motion.a
+              whileHover={{ scale: 1.2 }}
+              className=""
+              href="https://www.instagram.com/vitra.vu"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaInstagram />
+            </motion.a>
           </div>
         </motion.div>
       </div>

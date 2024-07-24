@@ -2,6 +2,7 @@ import React from "react";
 import ProfilePic from "../assets/profilePic.jpg";
 import { ABOUT_TEXT } from "../constants";
 import { motion } from "framer-motion";
+import { TextGenerateEffect } from "./ui/TextGenerateEffect";
 
 const About = React.forwardRef((props, ref) => {
   return (
@@ -46,9 +47,10 @@ const About = React.forwardRef((props, ref) => {
           transition={{ duration: 0.5 }}
           className="flex md:flex-1 flex-col selection:bg-slate-600 selection:text-orange-500"
         >
-          <p className="my-2 max-w-xl font-light italic tracking-wide text-slate-300">
-            {ABOUT_TEXT}
-          </p>
+          <TextGenerateEffect
+            className="font-thin text-lg italic tracking-tight text-slate-300"
+            words={ABOUT_TEXT}
+          />
         </motion.div>
       </div>
     </div>
